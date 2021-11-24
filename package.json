@@ -1,9 +1,9 @@
 {
-  "name": "gulp-elementary",
+  "name": "F-110",
   "version": "1.0.0",
   "description": "Simple gulp application",
   "main": "gulpfile.js",
-  "author": "ducker-dev <the.ivan.smirnov@gmail.com>",
+  "author": "Tati Nabokova",
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.26.5",
