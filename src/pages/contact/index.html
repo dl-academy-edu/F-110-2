@@ -23,18 +23,42 @@
 				<fieldset>
 					<div class="field-2-column">
 						<div class="label-wrapper">
-							<label for="input-name">Name</label>
-							<input type="text" id="input-name" placeholder="Ivan Ivanov">
+							@@include('input/index.html', {
+								"type": "text",
+								"id": "input-name",
+								"for":"input-name",
+								"input-class":"",
+								"placeholder":"Ivan Ivanov",
+								"status":"",
+								"label-class":"",
+								"label":"Name"
+							})
 						</div>
-						<label class="label-wrapper">
-							<span class="label">Phone</span>
-							<input type="number">
-						</label>
+						<div class="label-wrapper">
+							@@include('input/index.html', {
+								"type": "tel",
+								"id": "input-phone",
+								"for":"input-phone",
+								"input-class":"",
+								"placeholder":"",
+								"status":"required",
+								"label-class":"",
+								"label":"Phone"
+							})
+						</div>
 					</div>
 
 					<div class="label-wrapper">
-						<label for="input-email">E-mail</label>
-						<input type="email" id="input-email" required>
+						@@include('input/index.html', {
+							"type": "email",
+							"id": "input-email",
+							"for":"input-email",
+							"input-class":"",
+							"placeholder":"",
+							"status":"required",
+							"label-class":"",
+							"label":"E-mail"
+						})
 					</div>
 
 				</fieldset>
@@ -43,29 +67,58 @@
 					<legend>Payment Methods</legend>
 					<ul class="undotted checkbox-list">
 						<li>
-							<input type="checkbox" name="check-cash" id="checkbox-cash" class="checkbox-input" checked>
-							<label for="checkbox-cash" class="checkbox-label">Сash</label>
+							@@include('input/index.html', {
+								"type": "checkbox",
+								"id": "checkbox-cash",
+								"for":"checkbox-cash",
+								"input-class":"checkbox-input",
+								"input-name":"check-cash",
+								"placeholder":"",
+								"status":"checked",
+								"label-class":"checkbox-label",
+								"label":"Сash"
+							})
 						</li>
-						<!-- <li>
-                            <label>
-                                <input type="checkbox" name="check-card">
-                                Сredit Сard
-                            </label>
-                        </li> -->
 						<li>
-							<input type="checkbox" name="check-card" class="checkbox-input" id="checkbox-card">
-							<label for="checkbox-card" class="checkbox-label">Сredit Сard</label>
+							@@include('input/index.html', {
+								"type": "checkbox",
+								"id": "checkbox-card",
+								"for":"checkbox-card",
+								"input-class":"checkbox-input",
+								"input-name":"check-card",
+								"placeholder":"",
+								"status":"",
+								"label-class":"checkbox-label",
+								"label":"Сredit Сard"
+							})
 						</li>
 						<li>
-							<input type="checkbox" name="check-receipt" class="checkbox-input" id="checkbox-receipt" disabled>
-							<label for="checkbox-receipt" class="checkbox-label">Receipt</label>
+							@@include('input/index.html', {
+								"type": "checkbox",
+								"id": "checkbox-receipt",
+								"for":"checkbox-receipt",
+								"input-class":"checkbox-input",
+								"input-name":"check-receipt",
+								"placeholder":"",
+								"status":"disabled",
+								"label-class":"checkbox-label",
+								"label":"Receipt"
+							})
 						</li>
 					</ul>
 				</fieldset>
 
 				<div class="label-wrapper">
-					<label for="input-city">City of Birth</label>
-					<input type="date" id="input-city">
+					@@include('input/index.html', {
+						"type": "date",
+						"id": "input-city",
+						"for":"input-city",
+						"input-cclass":"",
+						"placeholder":"",
+						"status":"",
+						"label-class":"",
+						"label":"City of Birth"
+					})
 				</div>
 
 
@@ -73,21 +126,38 @@
 					<legend>Do you need a report on the services provided?</legend>
 					<ul class="undotted radio-list">
 						<li>
-							<label>
-								<input type="radio" name="report" class="radio-input" checked>
-								<span class="radio-label">Yes</span>
-							</label>
+
+							@@include('input/index.html', {
+								"type": "radio",
+								"id": "radio-yes",
+								"for":"radio-yes",
+								"input-class":"radio-input",
+								"input-name":"report",
+								"placeholder":"",
+								"status":"checked",
+								"label-class":"radio-label",
+								"label":"Yes"
+							})
 						</li>
 						<li>
-							<input type="radio" name="report" id="radio-no" class="radio-input">
-							<label for="radio-no" class="radio-label">no</label>
+							@@include('input/index.html', {
+								"type": "radio",
+								"id": "radio-no",
+								"for":"radio-no",
+								"input-class":"radio-input",
+								"input-name":"report",
+								"placeholder":"",
+								"status":"checked",
+								"label-class":"radio-label",
+								"label":"No"
+							})
 						</li>
 					</ul>
 				</fieldset>
 
 				<div class="label-wrapper">
-					<label for="text-message">Message</label>
 					<textarea id="text-message" placeholder="Message"></textarea>
+					<label for="text-message">Message</label>
 				</div>
 
 				<button type="submit" class="button">SUBMIT</button>
@@ -97,64 +167,10 @@
 
 	</main>
 
-	<article class="map">
-		<div class="container">
-			<div class="map-wrapper">
-				<h3 class="map-title">Chem-Dry</h3>
-				<p>9420 Cedar CT, Thornton, CO 80229</p>
-				<a href="tel:7206059399" class="map-phone">(720) 605-9399</a>
-				<a href="#" class="button button-secondary">Learn More</a>
-			</div>
-		</div>
+	@@include('map/index.html')
 
-	</article>
+	@@include('footer/index.html')
 
-	<footer class="footer">
-		<div class="container">
-			<p class="footer-info">Subscribe to our social networks</p>
-			<ul class="undotted social">
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-
-					</a>
-				</li>
-			</ul>
-		</div>
-
-	</footer>
 </body>
 
 </html>

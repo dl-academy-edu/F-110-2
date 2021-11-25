@@ -30,48 +30,34 @@
 		<section class="services container">
 			<h2 class="services-title">OUR MOST POPULAR SERVICES</h2>
 			<ul class="services-list undotted">
-				<li class="services-item">
-					<a href="#">
-						<img src="../../static/images/services/service1.jpg" alt="" width="280" height="165">
-					</a>
-					<a href="#">
-						<h3 class="services-heading">Carpet Cleaning</h3>
-					</a>
-					<p>When you choose Chem-Dry, you get deeper clean, faster-drying carpet and healthier home for you.</p>
-					<a href="#" class="button">Learn More</a>
-				</li>
-				<li class="services-item">
-					<a href="#">
-						<img src="../../static/images/services/service2.jpg" alt="" width="280" height="165">
-					</a>
-					<a href="#">
-						<h3 class="services-heading">Tile & Grout Cleaning</h3>
-					</a>
-					<p>One of the nicest touches to the basic architectural components of a homeis ceramic or stone tile in
-						kitchens, bathrooms</p>
-					<a href="#" class="button">Learn More</a>
-				</li>
-				<li class="services-item">
-					<a href="#">
-						<img src="../../static/images/services/service3.jpg" alt="" width="280" height="165">
-					</a>
-					<a href="#">
-						<h3 class="services-heading">Pet Stain Removal</h3>
-					</a>
-					<p>Here at Chem-Dry, we love our pets. They brighten up our day and they’re always there to support us,
-						through thick</p>
-					<a href="#" class="button">Learn More</a>
-				</li>
-				<li class="services-item">
-					<a href="#">
-						<img src="../../static/images/services/service4.jpg" alt="" width="280" height="165">
-					</a>
-					<a href="#">
-						<h3 class="services-heading">Commercial Cleaning</h3>
-					</a>
-					<p>Companies spend millions of dollars on carpeting, upholstery, leather and area rugs</p>
-					<a href="#" class="button">Learn More</a>
-				</li>
+				@@include('service-card/index.html', {
+					"src": "./../static/images/services/service1.jpg",
+					"alt": "brand1",
+					"href":"#",
+					"title":"Carpet Cleaning",
+					"text":"When you choose Chem-Dry, you get deeper clean, faster-drying carpet and healthier home for you."
+				})
+				@@include('service-card/index.html', {
+					"src": "./../static/images/services/service2.jpg",
+					"alt": "brand1",
+					"href":"#",
+					"title":"Tile & Grout Cleaning",
+					"text":"One of the nicest touches to the basic architectural components of a homeis ceramic or stone tile in kitchens, bathrooms"
+				})
+				@@include('service-card/index.html', {
+					"src": "./../static/images/services/service3.jpg",
+					"alt": "brand1",
+					"href":"#",
+					"title":"Pet Stain Removal",
+					"text":"Here at Chem-Dry, we love our pets. They brighten up our day and they’re always there to support us, through thick"
+				})
+				@@include('service-card/index.html', {
+					"src": "./../static/images/services/service4.jpg",
+					"alt": "brand1",
+					"href":"#",
+					"title":"Commercial Cleaning",
+					"text":"Companies spend millions of dollars on carpeting, upholstery, leather and area rugs"
+				})
 			</ul>
 		</section>
 
@@ -93,95 +79,51 @@
 		<section class="awards container">
 			<h2 class="hidden">Awards</h2>
 			<ul class="undotted awards-list">
-				<li>
-					<img src="../../static/images/brands/brand.png" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand2.png" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand3.png" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand4.png" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand5.jpg" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand6.jpg" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand3.png" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand2.png" alt="" width="90" height="90">
-				</li>
-				<li>
-					<img src="../../static/images/brands/brand4.png" alt="" width="90" height="90">
-				</li>
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand.png",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand2.png",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand3.png",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand4.png",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand5.jpg",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand6.jpg",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand3.png",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand2.png",
+					"alt": "brand1"
+				})
+				@@include('award/index.html', {
+					"src": "./../static/images/brands/brand4.png",
+					"alt": "brand1"
+				})
 			</ul>
 		</section>
 	</main>
 
-	<article class="map">
-		<div class="container">
-			<div class="map-wrapper">
-				<h3 class="map-title">Chem-Dry</h3>
-				<p>9420 Cedar CT, Thornton, CO 80229</p>
-				<a href="tel:7206059399" class="map-phone">(720) 605-9399</a>
-				<a href="#" class="button button-secondary">Learn More</a>
-			</div>
-		</div>
-
-	</article>
+	@@include('map/index.html')
 
 	@@include('footer/index.html')
 
-	<div class="overlay"></div>
-
-	<section class="popup">
-		<h3 class="hidden">Modal Window</h3>
-		<form action="#" method="POST" class="popup-form">
-			<fieldset>
-				<div class="field-2-column">
-					<div class="label-wrapper">
-						<label for="input-name">Name</label>
-						<input type="text" id="input-name" placeholder="Ivan Ivanov">
-					</div>
-					<label class="label-wrapper">
-						<span class="label">Phone</span>
-						<input type="number">
-					</label>
-				</div>
-
-				<div class="label-wrapper">
-					<label for="input-email">E-mail</label>
-					<input type="email" id="input-email" required>
-				</div>
-
-			</fieldset>
-
-
-			<button type="submit" class="button">SUBMIT</button>
-
-			<button class="popup-close">
-				<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M2.07109 14.6113C1.58694 15.1295 0.83381 15.1295 0.349661 14.6113C0.107586 14.3522 3.88142e-07 14.0355 4.02063e-07 13.69C4.15984e-07 13.3445 0.107586 13.0278 0.349661 12.7687L5.27185 7.5L0.349662 2.23127C0.107587 1.97215 8.86971e-07 1.65547 9.00891e-07 1.30998C9.14812e-07 0.964491 0.107587 0.647806 0.349662 0.388689C0.833811 -0.129545 1.58694 -0.129545 2.07109 0.388689L6.99328 5.65738L11.9155 0.38869C12.3996 -0.129545 13.1527 -0.129545 13.6369 0.38869C14.121 0.906924 14.121 1.71304 13.6369 2.23127L8.7147 7.5L13.6369 12.7687C14.121 13.287 14.121 14.0931 13.6369 14.6113C13.1527 15.1295 12.3996 15.1295 11.9155 14.6113L6.99328 9.34258L2.07109 14.6113Z"
-						fill="#121212" />
-				</svg>
-
-			</button>
-
-		</form>
-
-
-
-
-
-
-	</section>
+	@@include('popup/index.html')
 
 	<script src="scripts.js"></script>
 
