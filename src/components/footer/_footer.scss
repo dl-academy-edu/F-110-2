@@ -1,22 +1,22 @@
-footer {
-  background-color: #ffd042;
-  height: 80px;
+
+.footer {
+  background: #00559D;
+}
+
+.footer .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
 
-  span {
-    padding-right: 20px;
-  }
+.footer-info {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
 
-  a {
-    color: #000;
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-    &:hover {
-      border-bottom: 1px solid #000;
-    }
-  }
+.social {
+  display: flex;
 }

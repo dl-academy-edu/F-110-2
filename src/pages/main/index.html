@@ -4,28 +4,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="shortcut icon" href="/static/images/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/common.css">
-	<link rel="stylesheet" href="style.css">
+	<link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
 	<title>Main Page</title>
 
 </head>
 
 <body>
-  @@include('header/index.html')
+	@@include('header/index.html')
+
 	<main>
 		<section class="banner">
 			<div class="container">
 				<h1 class="banner-title">The world’s leading cleaning company</h1>
-				@@include('button/index.html', {
-          "text": "The world’s leading",
-          "href": "#",
-          "class": "button button-secondary"
-        })
+				<button type="button" class="button banner-button button-secondary">Get a Free Estimate</button>
 			</div>
 		</section>
 
@@ -41,11 +38,7 @@
 						<h3 class="services-heading">Carpet Cleaning</h3>
 					</a>
 					<p>When you choose Chem-Dry, you get deeper clean, faster-drying carpet and healthier home for you.</p>
-					@@include('button/index.html', {
-            "text": "Learn More",
-            "href": "#",
-            "class": "button"
-          })
+					<a href="#" class="button">Learn More</a>
 				</li>
 				<li class="services-item">
 					<a href="#">
@@ -56,11 +49,7 @@
 					</a>
 					<p>One of the nicest touches to the basic architectural components of a homeis ceramic or stone tile in
 						kitchens, bathrooms</p>
-            @@include('button/index.html', {
-              "text": "Learn More",
-              "href": "#",
-              "class": "button"
-            })
+					<a href="#" class="button">Learn More</a>
 				</li>
 				<li class="services-item">
 					<a href="#">
@@ -71,11 +60,7 @@
 					</a>
 					<p>Here at Chem-Dry, we love our pets. They brighten up our day and they’re always there to support us,
 						through thick</p>
-            @@include('button/index.html', {
-              "text": "Learn More",
-              "href": "#",
-              "class": "button"
-            })
+					<a href="#" class="button">Learn More</a>
 				</li>
 				<li class="services-item">
 					<a href="#">
@@ -85,11 +70,7 @@
 						<h3 class="services-heading">Commercial Cleaning</h3>
 					</a>
 					<p>Companies spend millions of dollars on carpeting, upholstery, leather and area rugs</p>
-					@@include('button/index.html', {
-            "text": "Learn More",
-            "href": "#",
-            "class": "button"
-          })
+					<a href="#" class="button">Learn More</a>
 				</li>
 			</ul>
 		</section>
@@ -155,52 +136,7 @@
 
 	</article>
 
-	<footer class="footer">
-		<div class="container">
-			<p class="footer-info">Subscribe to our social networks</p>
-			<ul class="undotted social">
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<svg width="60" height="58" viewBox="0 0 60 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M37.2118 20.1067V15.2733H32.7059C28.9836 15.2733 26.4368 18.3667 26.4368 22.2333V24.94H21.735V29.3867H26.4368V42.92H31.7263V29.3867H37.2118V24.94H31.7263V21.8467C31.7263 20.88 32.3141 20.3 32.9018 20.3H37.2118V20.1067ZM30.1591 0C46.4195 0 59.5454 12.9533 59.5454 29C59.5454 45.0467 46.4195 58 30.1591 58C13.8986 58 0.772705 45.0467 0.772705 29C0.772705 12.9533 13.8986 0 30.1591 0Z"
-								fill="white" />
-						</svg>
-
-					</a>
-				</li>
-			</ul>
-		</div>
-
-	</footer>
+	@@include('footer/index.html')
 
 	<div class="overlay"></div>
 
@@ -247,7 +183,7 @@
 
 	</section>
 
-	<script src="js/script.js"></script>
+	<script src="scripts.js"></script>
 
 </body>
 
