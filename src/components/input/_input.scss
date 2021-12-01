@@ -21,9 +21,7 @@ input[type=radio] {
 .checkbox-label:after,
 .radio-label:before,
 .radio-label:after {
-    content: '';
-    display: block;
-    position: absolute;
+    @extend %psevdo;
 }
 
 .radio-label:before,

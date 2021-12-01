@@ -1,3 +1,115 @@
+@import "../../components/mixin";
+
+@keyframes chat {
+  // from {
+  //   max-height: 0;
+  // }
+  100% {
+    max-height: 500px;
+  }
+}
+
+@keyframes chat-close {
+  to {
+    max-height: 0;
+  }
+}
+
+.chat {
+  width: 300px;
+  height: 488px;
+  max-height: 488px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #FFF;
+  overflow: hidden;
+  transition: .4s;
+
+
+  animation: chat-close 2s forwards 7s;
+
+  &__header {
+    background: #F6F6F8;
+    border-bottom: 1px solid #D9D9DB;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #27253F
+  }
+  &__desc {
+    font-size: 12px;
+    line-height: 14px;
+    color: #6B6A6A;
+  }
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+
+  &__message-container {
+    max-height: 0;
+    animation: chat 2s forwards;
+
+    @for $i from 1 through 900 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i + s;
+      }
+    }
+  }
+
+  &__message {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 8px 10px;
+    width: 75%;
+    position: relative;
+    &:after {
+      @extend %psevdo;
+      bottom: 0;
+      width: 10px;
+      height: 10px;
+    }
+    &_right {
+      background: #2198F4;
+      color: #FFF;
+      margin: 15px 15px 15px auto;
+      &:after {
+        background: url(../../static/images/blue-tail.png);
+        right: -6px;
+      }
+    }
+    &_left {
+      background: #E4E3E8;
+      margin: 0 auto 15px 15px;
+      &:after {
+        background: url(../../static/images/gray-tail.png);
+        left: -6px;
+      }
+    }
+  }
+}
+
+
 .banner {
   /* background: url(../img/fon.jpg) no-repeat center #E0E7ED; */
 
@@ -71,12 +183,10 @@
 }
 
 .about:after {
-  content: '';
-  display: block;
+  @extend %psevdo;
   width: 570px;
   height: 499px;
   background: #008752;
-  position: absolute;
   top: 40px;
   right: -70px;
   z-index: -1;

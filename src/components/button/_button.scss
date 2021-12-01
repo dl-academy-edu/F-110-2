@@ -12,14 +12,13 @@
     padding: 11px;
     text-align: center;
     cursor: pointer;
-}
-
-.button:hover {
-    background: #26CD8B;
-}
-
-.button:active {
-    background: #005232;
+    transition: $transition-duration;
+    &:hover {
+        background: #26CD8B;
+    }
+    &:active {
+        background: #005232;
+    }
 }
 
 .button-secondary {

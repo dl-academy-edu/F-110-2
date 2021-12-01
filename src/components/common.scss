@@ -1,12 +1,14 @@
+@import "./vars";
+@import "./mixin";
+
 * {
     box-sizing: border-box;
 }
 
 body {
+    @include font-size($line-height:21px);
     font-family: 'Lato', 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 21px;
-    color: #2C3036;
+    color: $text-color;
     margin: 0;
 }
 
