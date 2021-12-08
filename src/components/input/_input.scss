@@ -15,51 +15,49 @@ input[type=radio] {
     padding-left: 35px;
     margin-right: 20px;
     cursor: pointer;
+    &:before,
+    &:after {
+        @extend %psevdo;
+    }
+    &:before,
+    &:before {
+        top: -2px;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        border: 2px solid #777;
+        background: transparent;
+    }
+    &:after,
+    &:after {
+        top: 3px;
+        left: 5px;
+        width: 13px;
+        height: 13px;
+        background: $secondary;
+        opacity: 0;
+    }
 }
 
-.checkbox-label:before,
-.checkbox-label:after,
-.radio-label:before,
-.radio-label:after {
-    @extend %psevdo;
+.radio-label {
+    &:before {
+        border-radius: 50%;
+    }
+    &:after {
+        border-radius: 50%;
+    }
 }
 
-.radio-label:before,
-.checkbox-label:before {
-    top: -2px;
-    left: 0;
-    width: 19px;
-    height: 19px;
-    border: 2px solid #777;
-    background: transparent;
-}
-
-.radio-label:before {
-    border-radius: 50%;
-}
-
-.radio-label:after,
-.checkbox-label:after {
-    top: 3px;
-    left: 5px;
-    width: 13px;
-    height: 13px;
-    background: #95459A;
-    opacity: 0;
-}
-
-.radio-label:after {
-    border-radius: 50%;
-}
-
-.checkbox-input:checked + .checkbox-label:after,
-.radio-input:checked + .radio-label:after {
-    opacity: 1;
-}
-
-.checkbox-input:disabled + .checkbox-label,
-.checkbox-input:disabled + .checkbox-label:before,
-.radio-input:disabled + .radio-label:before,
-.radio-input:disabled + .radio-label {
-    opacity: .4;
+.checkbox-input,
+.radio-input {
+    &:checked + .checkbox-label:after,
+    &:checked + .radio-label:after {
+        opacity: 1;
+    }
+    &:disabled + .checkbox-label,
+    &:disabled + .checkbox-label:before,
+    &:disabled + .radio-label:before,
+    &:disabled + .radio-label {
+        opacity: .4;
+    }
 }

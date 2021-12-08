@@ -1,26 +1,29 @@
 .popup {
-    position: fixed;
-    background: rgba(149, 69, 154, 0.9);
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    display: none;
-  }
-  .popup-open {
+  position: fixed;
+  background: rgba(149, 69, 154, 0.9);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  &_open {
     display: block;
   }
-.popup-form {
-  max-width: 680px;
-  background: #EEEEEE;
-  padding: 50px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  &__form {
+    max-width: 680px;
+    background: $light-smoke;
+    padding: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
-.popup-close {
+.popup__close {
   position: absolute;
   top: 50px;
   right: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

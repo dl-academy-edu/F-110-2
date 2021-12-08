@@ -1,26 +1,21 @@
 
 .footer {
-  background: #00559D;
-}
-
-.footer .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-info {
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 130%;
-  text-transform: capitalize;
-  color: #FFFFFF;
+  background: $blue;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    @include font-size(40px, 130%, 900);
+    text-transform: capitalize;
+    color: #FFFFFF;
+  }
 }
 
 .social {
   display: flex;
-}
-
-.social li {
-  margin-left: 15px;
+  li {
+    margin-left: 15px;
+  }
 }

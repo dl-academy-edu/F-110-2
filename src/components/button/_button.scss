@@ -1,10 +1,8 @@
 .button {
-    background: #008752;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 18px;
+    @include font-size(15px, 18px, bold);
+    background: $primary;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $white;
     border: none;
     display: block;
     max-width: 181px;
@@ -14,21 +12,19 @@
     cursor: pointer;
     transition: $transition-duration;
     &:hover {
-        background: #26CD8B;
+        background: $primary-hover;
     }
     &:active {
-        background: #005232;
+        background: $primary-active;
     }
-}
 
-.button-secondary {
-    background: #95459A;
-}
-
-.button-secondary:hover {
-    background: #D665DD;
-}
-
-.button-secondary:active {
-    background: #722A77;
+    &_secondary {
+        background: $secondary;
+        &:hover {
+            background: $secondary-hover;
+        }
+        &:active {
+            background: $secondary-active;
+        }
+    }
 }

@@ -12,18 +12,14 @@
   }
   &__item {
     a {
+      @include font-size(17px, 20px, bold);
       margin-right: 15px;
       color: #333333;
-      font-weight: bold;
-      font-size: 17px;
-      line-height: 20px;
     }
   }
   &__phone {
-    font-weight: 800;
-    font-size: 17px;
-    line-height: 20px;
-    color: #95459A;
+    @include font-size(17px, 20px, 800);
+    color: $secondary;
     margin-right: 24px;
   }
 }

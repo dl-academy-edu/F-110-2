@@ -1,114 +1,5 @@
 @import "../../components/mixin";
-
-@keyframes chat {
-  // from {
-  //   max-height: 0;
-  // }
-  100% {
-    max-height: 500px;
-  }
-}
-
-@keyframes chat-close {
-  to {
-    max-height: 0;
-  }
-}
-
-.chat {
-  width: 300px;
-  height: 488px;
-  max-height: 488px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background: #FFF;
-  overflow: hidden;
-  transition: .4s;
-
-
-  animation: chat-close 2s forwards 7s;
-
-  &__header {
-    background: #F6F6F8;
-    border-bottom: 1px solid #D9D9DB;
-    padding: 15px;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-  }
-  &__title {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: #27253F
-  }
-  &__desc {
-    font-size: 12px;
-    line-height: 14px;
-    color: #6B6A6A;
-  }
-  &__close {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
-  }
-
-
-  &__message-container {
-    max-height: 0;
-    animation: chat 2s forwards;
-
-    @for $i from 1 through 900 {
-      &:nth-child(#{$i}) {
-        animation-delay: $i + s;
-      }
-    }
-  }
-
-  &__message {
-    margin-bottom: 15px;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 17px;
-    padding: 8px 10px;
-    width: 75%;
-    position: relative;
-    &:after {
-      @extend %psevdo;
-      bottom: 0;
-      width: 10px;
-      height: 10px;
-    }
-    &_right {
-      background: #2198F4;
-      color: #FFF;
-      margin: 15px 15px 15px auto;
-      &:after {
-        background: url(../../static/images/blue-tail.png);
-        right: -6px;
-      }
-    }
-    &_left {
-      background: #E4E3E8;
-      margin: 0 auto 15px 15px;
-      &:after {
-        background: url(../../static/images/gray-tail.png);
-        left: -6px;
-      }
-    }
-  }
-}
-
+@import "../../components/vars";
 
 .banner {
   /* background: url(../img/fon.jpg) no-repeat center #E0E7ED; */
@@ -120,22 +11,17 @@
   /* background-size: contain; */
   padding: 153px 0 288px;
   margin-bottom: 80px;
-}
-
-.banner-title {
-  font-weight: 900;
-  font-size: 90px;
-  line-height: 100%;
-  color: #00559D;
-  max-width: 80%;
-  margin: 0 0 47px;
-  letter-spacing: -1px;
-}
-
-.banner-button {
-  max-width: 360px;
-  font-size: 24px;
-  line-height: 29px;
+  &__title {
+    @include font-size(90px, 100%, 900);
+    color: $blue;
+    max-width: 80%;
+    margin: 0 0 47px;
+    letter-spacing: -1px;
+  }
+  &__button {
+    @include font-size(24px, 29px);
+    max-width: 360px;
+  }  
 }
 
 
@@ -143,34 +29,17 @@
 
 .services {
   margin-bottom: 110px;
-}
-
-.services-title {
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 50px;
-  text-transform: uppercase;
-  color: #00559D;
-  text-align: center;
-  margin: 0 0 50px;
-}
-
-.services-list {
-  display: flex;
-  margin: 0 -10px;    
-}
-
-.services-item {
-  max-width: 280px;
-  margin: 10px;
-}
-
-.services-heading {
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 36px;
-  color: #2C3036;
-  margin: 19px 0 20px;
+  &__title {
+    @include font-size(42px, 50px, bold);
+    text-transform: uppercase;
+    color: $blue;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  &__list {
+    display: flex;
+    margin: 0 -10px;    
+  }
 }
 
 /* ABOUT */
@@ -180,39 +49,33 @@
   align-items: flex-start;
   position: relative;
   margin-bottom: 106px;
-}
+  &:after {
+    @extend %psevdo;
+    width: 570px;
+    height: 499px;
+    background: $primary;
+    top: 40px;
+    right: -70px;
+    z-index: -1;
+  }
 
-.about:after {
-  @extend %psevdo;
-  width: 570px;
-  height: 499px;
-  background: #008752;
-  top: 40px;
-  right: -70px;
-  z-index: -1;
-}
-
-.about-wrapper {
-  margin-right: 10%;
-  font-size: 18px;
-  line-height: 28px;
-  color: #000000;
-}
-
-.about-title {
-  font-weight: 900;
-  font-size: 72px;
-  line-height: 100%;
-  color: #005DAB;
-  margin: 0 0 46px;
+  &__wrapper {
+    @include font-size(18px, 28px);
+    margin-right: 10%;
+    color: $black;
+  }
+  &__title {
+    @include font-size(72px, 100%, 900);
+    color: #005DAB;
+    margin: 0 0 46px;
+  }
 }
 
 /* AWARDS */
 .awards {
   margin-bottom: 80px;
-}
-
-.awards-list {
-  display: flex;
-  justify-content: space-between;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
