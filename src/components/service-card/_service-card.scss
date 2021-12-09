@@ -1,11 +1,33 @@
 .services {
-    &__item {
-    max-width: 280px;
-    margin: 10px;
+  &__item {
+    max-width: 50%;
+    padding: 10px;
   }
   &__heading {
-    @include font-size(30px, 36px, bold);
+    @include font-size(20px, 24px, 700);
     color: $text-color;
-    margin: 19px 0 20px;
+    margin: 7px 0 5px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .services {
+    &__item {
+      max-width: 280px;
+      margin: 10px;
+      padding: 0;
+    }
+    &__heading {
+      @include font-size(22px, 26px, 700);
+      margin: 10px 0 5px;
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  .services {
+    &__heading {
+      @include font-size(30px, 36px, 700);
+      margin: 19px 0 20px;
+    }
   }
 }

@@ -5,9 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__info {
-    @include font-size(40px, 130%, 900);
+    @include font-size(20px, 26px, 900);
     text-transform: capitalize;
     color: #FFFFFF;
   }
@@ -17,5 +18,37 @@
   display: flex;
   li {
     margin-left: 15px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .footer {
+    &__info {
+      @include font-size(26px, 34px, 900);
+    }
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .footer {
+    &__info {
+      @include font-size(40px, 130%, 900);
+    }
+  }
+}
+
+@media screen and (max-width:1023px) {
+  .social li svg {
+    max-width: 37px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .social li {
+    margin-right: 18px;
+    margin-left: 0;
+    svg {
+      max-width: 32px;
+    }
   }
 }
