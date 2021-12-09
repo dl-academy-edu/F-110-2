@@ -6,7 +6,10 @@ input[type=radio] {
 .checkbox-list,
 .radio-list {
     display: flex;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    li {
+        margin-bottom: 20px;
+    }
 }
 
 .checkbox-label,

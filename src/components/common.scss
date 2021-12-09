@@ -87,6 +87,7 @@ label,
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 20px;
+    width: 100%;
     &:focus-within label,
     &:focus-within span {
         color: $yellow;
@@ -96,12 +97,20 @@ label,
 .field_2-column {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width:767px) {
+        flex-wrap: wrap;
+    }
     .label__wrapper {
-        width: 280px;
         &:first-child {
             margin-right: 20px;
+            @media screen and (max-width:767px) {
+                margin-right: 0;
+            }
         }
+
+        
     }
+
 }
 
 
