@@ -1,6 +1,13 @@
 <li class="services__item">
     <a href="@@href">
-        <img src="@@src" alt="@@alt">
+        <picture class="services-card__wrapper">
+            <source srcset="./../static/images/services/service1-mobile.jpg, ./../static/images/services/service1-2x 2x.jpg" media="(max-width:767px)">
+            <source srcset="./../static/images/services/service1-tablet.jpg, ./../static/images/services/service1-2x 2x.jpg" media="(max-width:1023px)">
+            <source srcset="./../static/images/services/service1.jpg, ./../static/images/services/service1-2x 2x.jpg">
+            <img srcset="@@srcset" src="@@src" alt="@@alt" class="services-card__img">
+        </picture>
+            
+        
         <h3 class="services__heading">@@title</h3>
     </a>
     <p>@@text</p>
